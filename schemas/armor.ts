@@ -1,23 +1,12 @@
+import common from "./common";
+import universalItem from "./universalItem";
+
 export default {
   name: "armor",
   type: "document",
   title: "Armor",
   fields: [
-    {
-      name: "name",
-      title: "Name",
-      type: "string",
-    },
-    {
-      name: "img",
-      title: "Image",
-      type: "image",
-    },
-    {
-      name: "description",
-      title: "Description",
-      type: "text",
-    },
+    ...common,
     {
       name: "armor",
       title: "Armor",
@@ -30,11 +19,6 @@ export default {
       type: "boolean",
       initialValue: false,
     },
-    {
-      name: "slots",
-      title: "Slots",
-      type: "number",
-      initialValue: 1,
-    },
+    ...universalItem,
   ],
 };
